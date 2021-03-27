@@ -1,0 +1,77 @@
+@font-face {
+    font-family: "Houschka";
+    src: url("../fonts/Houschka.ttf");
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: "Houschka", Arial, Helvetica, sans-serif;
+    font-size: 1.6rem;
+}
+
+img {
+    max-width: 100%;
+    border-radius: .3rem;
+}
+
+h1 {
+    font-size: 4rem;
+    text-align: center;
+}
+
+p {
+    text-align: justify;
+}
+
+.contenedor {
+    max-width: 120rem;
+    width: 95%;
+    margin: 0 auto;
+}
+
+.entrada-blog a {
+    display: inline-block;
+    color: #fff;
+    background-color: #2196f3;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: .3rem;
+    display: block;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .contenedor-grid {
+        display: grid;
+        grid-template-areas: "izquierda contenido derecha";
+        grid-template-columns: 1fr 3fr 1fr;
+        grid-auto-flow: column; /* Contenido en columnas */
+        column-gap: 2rem;
+    }
+
+    .sidebar-1,
+    .sidebar-2 {
+        margin-top: 2rem;
+        text-align: center;
+    }
+
+    .contenido-principal {
+        grid-area: contenido;
+    }
+
+    .sidebar-1 {
+        grid-area: izquierda;
+    }
+
+}
